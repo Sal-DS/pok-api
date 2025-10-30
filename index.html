@@ -6,27 +6,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+        }
         .container{
             width: 500px;
             height: 400px;
-            background-color: rgb(255, 0, 0);
+            background-color: rgb(223, 223, 223);
+            text-align: center;
+        }
+        .content{
+            margin-top: 5vh;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button>GERAR</button>
-        <br>
-        <h3>Pokémon</h3>
-        <img src="" alt="Imagem do Pokémon">
+        <div class="content">
+            <button onclick="randPok()">GERAR</button>
+            <br>
+            <h3 class="pokename">Pokémon</h3>
+            <img class="pokeimg" src="" alt="Imagem do Pokémon"> 
+            <p id="typeone"></p>
+            <p id="typetwo"></p>
+
+        </div>
+        <h2 class="powerRate"></h2>
     </div>
     <div class="team">
         <ol>
             <div id="teamlist">
-                <p>Pokémon</p>
-                <img src="" alt="Imagem do Pokémon no time"> <!--Multiplicar 6x-->
             </div>
         </ol>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
