@@ -1,7 +1,8 @@
 const Poketypes = [
   ["normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "steel", "dark", "fairy"],
-  ["gray", "red", "blue", "green", "yellow", "lightblue", "brown", "purple", "orange", "lightgray", "pink", "lime", "tan", "indigo", "navy", "silver", "black", "lightpink"]
+  ["#A8A77A", "#EE8130", "#6390F0", "#7AC74C", "#F7D02C", "#96D9D6", "#C22E28", "#A33EA1", "#E2BF65", "#A98FF3", "#F95587", "#A6B91A", "#B6A136", "#735797", "#6F35FC", "#B7B7CE", "#705746", "#D685AD"]
 ];
+
 
 let rate = 0;
 let teamtypes = new Set();
