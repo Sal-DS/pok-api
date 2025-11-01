@@ -45,10 +45,12 @@ function randPok() {
 }
 
 function addTeam(img, pokename){
-
+    let team = document.getElementById("teamlist");
     pokeindex++;
     console.log("div criada")
-    const team = document.getElementById("teamlist");
+    if(pokeindex <= 3){
+        team = document.getElementById("left-teamlist");
+    }
 
     //CRIA UM ELEMENTO DIV QUANDO O MÉTODO FOR CHAMADO!
     const cell = document.createElement("div");
