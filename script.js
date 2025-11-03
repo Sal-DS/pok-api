@@ -1,6 +1,6 @@
 const Poketypes = [
   ["normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "steel", "dark", "fairy"],
-  ["#A8A77A", "#EE8130", "#6390F0", "#7AC74C", "#F7D02C", "#96D9D6", "#C22E28", "#A33EA1", "#E2BF65", "#A98FF3", "#F95587", "#A6B91A", "#B6A136", "#735797", "#6F35FC", "#B7B7CE", "#705746", "#D685AD"]
+  ["#919AA2", "#F28D52", "#5090D6", "#63BC5A", "#F2C53D", "#73CEC0", "#CE416B", "#B567CE", "#D97845", "#89AAE3", "#FA7179", "#91C12F", "#C5B78C", "#5269AD", "#0B6DC3", "#5A8EA2", "#5A5465", "#EC8FE6"]
 ];
 
 
@@ -45,27 +45,24 @@ function randPok() {
     });
 }
 
-function addTeam(img, pokename){
+function addTeam(img, pokename) {
     let team = document.getElementById("teamlist");
     pokeindex++;
-    console.log("div criada")
-    if(pokeindex <= 3){
+
+    if (pokeindex <= 3) {
         team = document.getElementById("left-teamlist");
     }
 
-    //CRIA UM ELEMENTO DIV QUANDO O MÉTODO FOR CHAMADO!
     const cell = document.createElement("div");
 
-    //ESCREVE NO HTML DA DIV CRIADA
     cell.innerHTML = `
-        <div id="list">
-            <p>${pokename}</p>
-            <img src="${img}" alt="Imagem do Pokémon no time">
-        </div>
+        <img src="${img}" alt="Imagem do Pokémon no time">
+        <p>${pokename}</p>
     `;
-    team.appendChild(cell);
 
+    team.appendChild(cell);
 }
+
 
 function powerRate(){
     if(pokeindex >= 6){
