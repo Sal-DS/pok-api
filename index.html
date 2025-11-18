@@ -9,20 +9,35 @@
     <style>
         body {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin: 0;
-            height: 100vh;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin-top: 10px;
         }
-        .container {
-            width: 500px;
-            min-height: 400px;
+        .container{
+            margin: 5vw;
+            width: 24em;
+            height: 24em;
+            color: white;
+            background-color: #a62222;
             text-align: center;
+            min-height: 400px;
+        }
+        .content{
+            margin-top: 20px;
+        }
+        .pokeimg{
+            width: 150px;
+            height: 150px;
         }
     </style>
 </head>
 <body>
+    <div class="team left">
+        <ol>
+            <div id="left-teamlist"></div> 
+        </ol>    
+    </div>
     <div class="container">
         <div class="content">
             <button onclick="randPok()">GERAR</button>
@@ -35,10 +50,9 @@
         </div>
         <h2 class="powerRate"></h2>
     </div>
-    <div class="team">
+    <div class="team right">
         <ol>
-            <div id="teamlist">
-            </div>
+           <div id="teamlist"></div> 
         </ol>
     </div>
     <script src="script.js"></script>
