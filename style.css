@@ -40,7 +40,8 @@ button {
 }
 
 /* Parte central (menor e mais equilibrada) */
-button::before {
+/* only the generate button shows the custom inner label */
+#generateBtn::before {
     content: 'GERAR';
     position: absolute;
     top: 50%;
@@ -114,4 +115,75 @@ button:active {
 #teamlist div {
     flex-direction: row-reverse;
     text-align: right;
+}
+
+/* Team member card (usa img/equipe.png como fundo) */
+.team-member {
+    width: 320px;
+    height: 72px;
+    background-image: url('img/equipe.png');
+    background-size: 320px 72px; /* fix background to card size for precise alignment */
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    color: #fff;
+}
+.team-member .member-sprite{
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 36px; /* center X of left pokeball (adjustable) */
+    transform: translate(-50%, -50%); /* center on the circle */
+    z-index: 1; /* behind the text */
+}
+.team-member .member-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:4px;
+    min-width: 0;
+    margin-left: 150px; /* increased space for the circle and sprite */
+    z-index: 2; /* ensure text appears above the sprite */
+}
+
+/* Right-side variant: move background circle to right and center sprite */
+.team-member.right{
+    background-position: right center;
+}
+.team-member.right .member-sprite{
+    left: auto;
+    right: 36px; /* center X of right pokeball (adjustable) */
+    transform: translate(50%, -50%); /* center on the right circle */
+    z-index: 1; /* behind the text */
+}
+.team-member.right .member-info{
+    margin-left: 0;
+    margin-right: 150px; /* increased space for circle on right */
+    text-align: right;
+}
+.member-name{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    color: #111111; /* darker so it's visible above the gray background */
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.member-types{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: #444444;
+}
+
+#left-teamlist, #teamlist{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
